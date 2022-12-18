@@ -1,0 +1,59 @@
+.choice {
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        flex-grow: 1;
+
+        cursor: pointer;
+
+        justify-content: center;
+        align-items: center;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        transition: all 5s;
+        pointer-events: none;
+
+        &:hover {
+            flex-grow: 2;
+            font-size: 32px;
+        }
+
+        * {
+            pointer-events: auto;
+            color: white;
+            padding: 1rem;
+            background-color: black;
+            clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+            opacity: 0.75;
+        }
+    }
+}
+
+.or {
+    $size: 5rem;
+    position: absolute;
+    top: calc(50% - $size / 2);
+    left: calc(50% - $size / 2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: white;
+
+    width: $size;
+    height: $size;
+
+    transition: opacity 0.25s;
+}

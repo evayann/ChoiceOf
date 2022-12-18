@@ -1,0 +1,13 @@
+<div class="choice">
+    <div (mouseenter)="hoverState(true)" (mouseleave)="hoverState(false)"
+        [ngStyle]="{backgroundImage: 'url(../../../assets/test1.jpeg)'}">
+        <h2> Choix 1 </h2>
+    </div>
+
+    <div (mouseenter)="hoverState(true)" (mouseleave)="hoverState(false)"
+        [ngStyle]="{backgroundImage: 'url(../../../assets/test2.jpeg)'}">
+        <h2> Choice 2</h2>
+    </div>
+</div>
+
+<p class="or" [ngStyle]="{opacity: hoverOrSelected ? 0 : 1}"> Ou </p>
