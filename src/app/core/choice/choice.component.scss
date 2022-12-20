@@ -1,3 +1,9 @@
+$front: white;
+$bg: black;
+$bg-alt: rgb(0, 123, 255);
+$angle: 14deg;
+$shadow: hsla(210, 40%, 52%, .4);
+
 .choice {
     display: flex;
 
@@ -30,22 +36,151 @@
 
         * {
             pointer-events: auto;
-            color: white;
+            color: $front;
             padding: 1rem;
-            background-color: black;
+            background-color: $bg;
             clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
             opacity: 0.75;
         }
     }
 }
 
-:not(div > *) {
+:host:not(.choice)>* {
     position: absolute;
 }
 
-h2 {
+.for,
+.next {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    span {
+        padding: 1rem 2rem;
+        background-color: $bg;
+        color: $front;
+    }
+}
+
+.for {
     top: 10%;
-    left: 50%;
+}
+
+.next {
+    bottom: 10%;
+
+    button {
+        all: unset;
+
+        position: relative;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $front;
+
+        background-color: $bg-alt;
+        box-shadow: $shadow 2px 2px 22px;
+        border-radius: 4px;
+
+        overflow: hidden; // Hide left & right
+
+        &:focus {
+            outline-color: transparent;
+            box-shadow: $bg 2px 2px 22px;
+        }
+
+        &::after {
+            content: attr(content);
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            font-weight: 200;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            pointer-events: none;
+        }
+
+        .right,
+        .left {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        .right {
+            left: 66%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                pointer-events: none;
+
+                $extra-width: 10%;
+                width: 100% + $extra-width;
+                height: 120%;
+
+                left: -66% - $extra-width / 2;
+
+                background-color: $bg;
+                transition: transform .4s ease-out;
+                transform: translate(0, -100%);
+            }
+        }
+
+        .left {
+            right: 66%;
+        }
+
+        &:hover .right::after {
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        & .right:hover::after {
+            transform: translate(0, -50%) rotate(-$angle);
+        }
+
+        & .left:hover~.right::after {
+            transform: translate(0, -50%) rotate($angle);
+        }
+
+        /* bubbles */
+        &::before {
+            content: '';
+            opacity: .6;
+            background:
+                radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, $front 3px, $front 4px, transparent 4px),
+                radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, $front 3px, $front 4px, transparent 4px),
+                radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, $front 5px, $front 6px, transparent 6px);
+
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            animation: bubbles 5s linear infinite both;
+        }
+
+        @keyframes bubbles {
+            from {
+                transform: translate();
+            }
+
+            to {
+                transform: translate(0, -66.666%);
+            }
+        }
+    }
 }
 
 .or {
@@ -58,7 +193,7 @@ h2 {
     justify-content: center;
 
     border-radius: 50%;
-    background-color: white;
+    background-color: $front;
 
     width: $size;
     height: $size;

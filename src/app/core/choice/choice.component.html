@@ -1,14 +1,39 @@
 <div class="choice">
-    <div (mouseenter)="hoverState(true)" (mouseout)="hoverState(false)" (transitionstart)="transitionState(true)"
-        (transitionend)="transitionState(false)" [ngStyle]="{backgroundImage: 'url(' + leftChoice.image + ')'}">
-        <h2> {{ leftChoice.name }} </h2>
-    </div>
+  <div
+    (mouseenter)="hoverState(true)"
+    (mouseout)="hoverState(false)"
+    (transitionstart)="transitionState(true)"
+    (transitionend)="transitionState(false)"
+    [style]="'backgroundImage: url(' + leftChoice.image + ')'"
+    [ngStyle]="leftStyle"
+    (click)="select('left')"
+  >
+    <h2>{{ leftChoice.name }}</h2>
+  </div>
 
-    <div (mouseenter)="hoverState(true)" (mouseout)="hoverState(false)" (transitionstart)="transitionState(true)"
-        (transitionend)="transitionState(false)" [ngStyle]="{backgroundImage: 'url(' + rightChoice.image + ')'}">
-        <h2> {{ rightChoice.name }} </h2>
-    </div>
+  <div
+    (mouseenter)="hoverState(true)"
+    (mouseout)="hoverState(false)"
+    (transitionstart)="transitionState(true)"
+    (transitionend)="transitionState(false)"
+    [style]="'backgroundImage: url(' + rightChoice.image + ')'"
+    [ngStyle]="rightStyle"
+    (click)="select('right')"
+  >
+    <h2>{{ rightChoice.name }}</h2>
+  </div>
 </div>
 
-<h2> {{ personTarget }} </h2>
-<p class="or" [ngStyle]="{opacity: isFixed ? 1 : 0}"> Ou </p>
+<h2 class="for">
+  <span>{{ for }}</span>
+</h2>
+<p class="or" *ngIf="!displayNext" [ngStyle]="{ opacity: isFixed ? 1 : 0 }">
+  Ou
+</p>
+<div class="next" *ngIf="displayNext">
+  <button [attr.content]="'Question suivante'" (click)="next()">
+    <div class="left"></div>
+    Question suivante
+    <div class="right"></div>
+  </button>
+</div>
