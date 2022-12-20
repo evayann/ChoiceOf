@@ -1,0 +1,10 @@
+[
+    {
+        "for": "Eurotherm",
+        "vs": 
+        [
+            { "name": "test1", "image": "../../../assets/test1.jpeg"},
+            { "name": "test2", "image": "../../../assets/test1.jpeg"}
+        ]
+    }
+]

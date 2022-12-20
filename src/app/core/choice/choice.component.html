@@ -1,13 +1,14 @@
 <div class="choice">
-    <div (mouseenter)="hoverState(true)" (mouseleave)="hoverState(false)"
-        [ngStyle]="{backgroundImage: 'url(../../../assets/test1.jpeg)'}">
-        <h2> Choix 1 </h2>
+    <div (mouseenter)="hoverState(true)" (mouseout)="hoverState(false)" (transitionstart)="transitionState(true)"
+        (transitionend)="transitionState(false)" [ngStyle]="{backgroundImage: 'url(' + leftChoice.image + ')'}">
+        <h2> {{ leftChoice.name }} </h2>
     </div>
 
-    <div (mouseenter)="hoverState(true)" (mouseleave)="hoverState(false)"
-        [ngStyle]="{backgroundImage: 'url(../../../assets/test2.jpeg)'}">
-        <h2> Choice 2</h2>
+    <div (mouseenter)="hoverState(true)" (mouseout)="hoverState(false)" (transitionstart)="transitionState(true)"
+        (transitionend)="transitionState(false)" [ngStyle]="{backgroundImage: 'url(' + rightChoice.image + ')'}">
+        <h2> {{ rightChoice.name }} </h2>
     </div>
 </div>
 
-<p class="or" [ngStyle]="{opacity: hoverOrSelected ? 0 : 1}"> Ou </p>
+<h2> {{ personTarget }} </h2>
+<p class="or" [ngStyle]="{opacity: isFixed ? 1 : 0}"> Ou </p>

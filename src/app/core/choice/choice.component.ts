@@ -8,12 +8,22 @@ import { IChoice } from '@models/choice';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChoiceComponent {
+  @Input() personTarget!: string;
   @Input() leftChoice!: IChoice;
   @Input() rightChoice!: IChoice;
 
-  hoverOrSelected: boolean = false;
+  hover: boolean = false;
+  transition: boolean = false;
+
+  get isFixed(): boolean {
+    return !this.hover && !this.transition;
+  }
 
   hoverState(isHover: boolean): void {
-    this.hoverOrSelected = isHover;
+    this.hover = isHover;
+  }
+
+  transitionState(isTransition: boolean): void {
+    this.transition = isTransition;
   }
 }

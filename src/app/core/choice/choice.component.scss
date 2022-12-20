@@ -39,9 +39,17 @@
     }
 }
 
+:not(div > *) {
+    position: absolute;
+}
+
+h2 {
+    top: 10%;
+    left: 50%;
+}
+
 .or {
     $size: 5rem;
-    position: absolute;
     top: calc(50% - $size / 2);
     left: calc(50% - $size / 2);
 
