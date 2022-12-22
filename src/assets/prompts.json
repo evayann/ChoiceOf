@@ -1,12 +1,22 @@
 [
     {
-        "for": "Eurotherm",
-        "left": { "name": "A", "image": "../../../assets/test1.jpeg"},
-        "right": { "name": "B", "image": "../../../assets/test2.jpeg"}
-    }, 
+        "for": "Le J",
+        "left": { "name": "Chocoblast", "image": "chocoblast.jpg"},
+        "right": { "name": "Secret Santa", "image": "secret-santa.jpg"}
+    },
     {
-        "for": "IotB",
-        "left": { "name": "C", "image": "../../../assets/test1.jpeg"},
-        "right": { "name": "D", "image": "../../../assets/test2.jpeg"}
+        "for": "Eurotherm",
+        "left": { "name": "GG", "image": "italy.avif"},
+        "right": { "name": "Joe", "image": "uk.jpg"}
+    },
+    {
+        "for": "Les devs",
+        "left": { "name": "Spaghetti code", "image": "spaghetti.jpeg"},
+        "right": { "name": "Prettier", "image": "prettier.png"}
+    },
+    {
+        "for": "Vincent 1",
+        "left": { "name": "Angular", "image": "angular.png"},
+        "right": { "name": "React", "image": "react.png"}
     }
 ]
