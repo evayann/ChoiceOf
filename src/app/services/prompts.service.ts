@@ -7,7 +7,11 @@ import prompts from '@assets/prompts.json';
 })
 export class PromptsService {
   get random(): IPrompt {
-    return prompts[Math.floor(Math.random() * prompts.length)];
+    return this.rdm(prompts);
+  }
+
+  randomExcept(excludePrompt?: IPrompt): IPrompt {
+    return this.rdm(prompts.filter((prompt) => prompt !== excludePrompt));
   }
 
   getPrompt(left: string, right: string): IPrompt | undefined {
@@ -15,5 +19,9 @@ export class PromptsService {
       (prompt: IPrompt) =>
         prompt.left.name === left && prompt.right.name === right
     );
+  }
+
+  private rdm(prompts: IPrompt[]): IPrompt {
+    return prompts[Math.floor(Math.random() * prompts.length)];
   }
 }

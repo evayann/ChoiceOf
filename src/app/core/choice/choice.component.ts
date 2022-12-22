@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { IChoice } from '@models/choice';
 
 @Component({
@@ -11,6 +17,7 @@ export class ChoiceComponent {
   @Input() for!: string;
   @Input() leftChoice!: IChoice;
   @Input() rightChoice!: IChoice;
+  @Output() nextPrompt: EventEmitter<void> = new EventEmitter();
 
   hover: boolean = false;
   transition: boolean = false;
@@ -30,7 +37,7 @@ export class ChoiceComponent {
   }
 
   next(): void {
-    console.log('toto');
+    this.nextPrompt.emit();
   }
 
   select(choice: 'left' | 'right'): void {

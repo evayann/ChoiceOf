@@ -1,5 +1,7 @@
 <app-choice
+  *ngIf="prompt"
   [leftChoice]="prompt.left"
   [rightChoice]="prompt.right"
   [for]="prompt.for"
+  (nextPrompt)="routeToARandomPrompt()"
 ></app-choice>
