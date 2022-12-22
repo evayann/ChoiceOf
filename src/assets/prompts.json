@@ -1,0 +1,12 @@
+[
+    {
+        "for": "Eurotherm",
+        "left": { "name": "A", "image": "../../../assets/test1.jpeg"},
+        "right": { "name": "B", "image": "../../../assets/test2.jpeg"}
+    }, 
+    {
+        "for": "IotB",
+        "left": { "name": "C", "image": "../../../assets/test1.jpeg"},
+        "right": { "name": "D", "image": "../../../assets/test2.jpeg"}
+    }
+]

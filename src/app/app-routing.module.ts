@@ -1,20 +1,39 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, UrlSegment } from '@angular/router';
-import { ChoiceComponent } from './core/choice/choice.component';
+import {
+  RouterModule,
+  Routes,
+  UrlMatchResult,
+  UrlSegment,
+} from '@angular/router';
+import { ChoicePageComponent } from './pages/choice-page/choice-page.component';
+
+const choiceMatcher = (url: UrlSegment[]): UrlMatchResult | null => {
+  if (url.length !== 1) return null;
+
+  const match = url[0].path.match('^.*-vs-.*$');
+
+  if (match) {
+    const [left, right] = match[0].split('-vs-');
+    return {
+      consumed: url,
+      posParams: {
+        left: new UrlSegment(left, {}),
+        right: new UrlSegment(right, {}),
+      },
+    };
+  }
+
+  return null;
+};
 
 const routes: Routes = [
   {
-    matcher: (url: UrlSegment[]) => {
-      return url.length === 1 && url[0].path.match('^[0-9]*$')
-        ? {
-            consumed: url,
-            posParams: {
-              left: new UrlSegment('toto', {}),
-            },
-          }
-        : null;
-    },
-    component: ChoiceComponent,
+    matcher: choiceMatcher,
+    component: ChoicePageComponent,
+  },
+  {
+    path: '**',
+    component: ChoicePageComponent,
   },
 ];
 

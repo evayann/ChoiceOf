@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { IChoice } from '@models/choice';
 
 @Component({
@@ -17,10 +16,6 @@ export class ChoiceComponent {
   transition: boolean = false;
   displayNext: boolean = false;
   leftIsSelected?: boolean;
-
-  constructor(private route: ActivatedRoute) {
-    console.log(this.route.snapshot.paramMap.get('left'));
-  }
 
   get isFixed(): boolean {
     return !this.hover && !this.transition;
