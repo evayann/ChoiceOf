@@ -18,5 +18,20 @@
         "for": "Vincent 1",
         "left": { "name": "Angular", "image": "angular.png"},
         "right": { "name": "React", "image": "react.png"}
+    },
+    {
+        "for": "Eurotherm",
+        "left": { "name": "Des specs", "image": "specs.jpg"},
+        "right": { "name": "De l'orginaisation", "image": "organisation.png"}
+    },
+    {
+        "for": "Eurotherm",
+        "left": { "name": "Des specs", "image": "specs.jpg"},
+        "right": { "name": "De l'orginaisation", "image": "organisation.png"}
+    },
+    {
+        "for": "Le G",
+        "left": { "name": "Mark Leknor", "image": "uk.jpg"},
+        "right": { "name": "Remi", "image": "french.jpg"}
     }
 ]

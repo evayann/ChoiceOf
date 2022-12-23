@@ -28,12 +28,12 @@ export class ChoiceComponent {
     return !this.hover && !this.transition;
   }
 
-  get leftStyle(): { [key: string]: any } {
-    return this.getStyle('left');
+  get leftClass(): string {
+    return this.getDynamicClass('left');
   }
 
-  get rightStyle(): { [key: string]: any } {
-    return this.getStyle('right');
+  get rightClass(): string {
+    return this.getDynamicClass('right');
   }
 
   next(): void {
@@ -53,16 +53,17 @@ export class ChoiceComponent {
     this.transition = isTransition;
   }
 
-  private getStyle(side: 'left' | 'right'): { [key: string]: any } {
-    if (this.leftIsSelected === undefined) return {};
+  private getDynamicClass(side: 'left' | 'right'): string {
+    if (this.leftIsSelected === undefined) return '';
 
     const bool = side === 'left' ? !this.leftIsSelected : this.leftIsSelected;
-    return bool
-      ? {
-          width: 0,
-          flexGrow: 0,
-          overflow: 'hidden',
-        }
-      : {};
+    return bool ? 'hidden' : '';
+    // return bool
+    //   ? {
+    //       width: 0,
+    //       flexGrow: 0,
+    //       overflow: 'hidden',
+    //     }
+    //   : {};
   }
 }

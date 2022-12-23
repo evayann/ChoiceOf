@@ -7,7 +7,7 @@
     [style]="
       'backgroundImage: url(../../../assets/pictures/' + leftChoice.image + ')'
     "
-    [ngStyle]="leftStyle"
+    [ngClass]="leftClass"
     (click)="select('left')"
   >
     <h2>{{ leftChoice.name }}</h2>
@@ -21,7 +21,7 @@
     [style]="
       'backgroundImage: url(../../../assets/pictures/' + rightChoice.image + ')'
     "
-    [ngStyle]="rightStyle"
+    [ngClass]="rightClass"
     (click)="select('right')"
   >
     <h2>{{ rightChoice.name }}</h2>
