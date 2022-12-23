@@ -40,8 +40,18 @@
         "right": { "name": "Le véritable", "image": "veritable.jpg"}
     },
     {
-        "for": "La famille",
-        "left": { "name": "La table des bros", "image": "bros.HEIC"},
-        "right": { "name": "Le véritable", "image": "veritable.jpg"}
+        "for": "Les Devs",
+        "left": { "name": "Python", "image": "python.png"},
+        "right": { "name": "TS", "image": "ts.svg"}
+    },
+    {
+        "for": "Le monde",
+        "left": { "name": "Chocolat chaud", "image": "chocolat-chaud.jpg"},
+        "right": { "name": "Café", "image": "cafe.svg"}
+    },
+    {
+        "for": "Le monde",
+        "left": { "name": "Chocolat chaud", "image": "chocolat-chaud.jpg"},
+        "right": { "name": "Café", "image": "cafe.svg"}
     }
 ]
