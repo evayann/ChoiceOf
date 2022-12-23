@@ -4,9 +4,7 @@
     (mouseout)="hoverState(false)"
     (transitionstart)="transitionState(true)"
     (transitionend)="transitionState(false)"
-    [style]="
-      'backgroundImage: url(../../../assets/pictures/' + leftChoice.image + ')'
-    "
+    [style]="'backgroundImage: url(assets/pictures/' + leftChoice.image + ')'"
     [ngClass]="leftClass"
     (click)="select('left')"
   >
@@ -18,9 +16,7 @@
     (mouseout)="hoverState(false)"
     (transitionstart)="transitionState(true)"
     (transitionend)="transitionState(false)"
-    [style]="
-      'backgroundImage: url(../../../assets/pictures/' + rightChoice.image + ')'
-    "
+    [style]="'backgroundImage: url(assets/pictures/' + rightChoice.image + ')'"
     [ngClass]="rightClass"
     (click)="select('right')"
   >
