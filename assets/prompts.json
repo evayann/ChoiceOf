@@ -36,7 +36,7 @@
     },
     {
         "for": "La famille",
-        "left": { "name": "La table des bros", "image": "bros.HEIC"},
+        "left": { "name": "La table des bros", "image": "bros.jpg"},
         "right": { "name": "Le véritable", "image": "veritable.jpg"}
     },
     {
