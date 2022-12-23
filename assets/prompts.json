@@ -1,0 +1,47 @@
+[
+    {
+        "for": "Le J",
+        "left": { "name": "Chocoblast", "image": "chocoblast.jpg"},
+        "right": { "name": "Secret Santa", "image": "secret-santa.jpg"}
+    },
+    {
+        "for": "Eurotherm",
+        "left": { "name": "GG", "image": "italy.avif"},
+        "right": { "name": "Joe", "image": "uk.jpg"}
+    },
+    {
+        "for": "Les devs",
+        "left": { "name": "Spaghetti code", "image": "spaghetti.jpeg"},
+        "right": { "name": "Prettier", "image": "prettier.png"}
+    },
+    {
+        "for": "Vincent 1",
+        "left": { "name": "Angular", "image": "angular.png"},
+        "right": { "name": "React", "image": "react.png"}
+    },
+    {
+        "for": "Eurotherm",
+        "left": { "name": "Des specs", "image": "specs.jpg"},
+        "right": { "name": "De l'orginaisation", "image": "organisation.png"}
+    },
+    {
+        "for": "Eurotherm",
+        "left": { "name": "Des specs", "image": "specs.jpg"},
+        "right": { "name": "De l'orginaisation", "image": "organisation.png"}
+    },
+    {
+        "for": "Le G",
+        "left": { "name": "Mark Leknor", "image": "uk.jpg"},
+        "right": { "name": "Remi", "image": "french.jpg"}
+    },
+    {
+        "for": "La famille",
+        "left": { "name": "La table des bros", "image": "bros.HEIC"},
+        "right": { "name": "Le véritable", "image": "veritable.jpg"}
+    },
+    {
+        "for": "La famille",
+        "left": { "name": "La table des bros", "image": "bros.HEIC"},
+        "right": { "name": "Le véritable", "image": "veritable.jpg"}
+    }
+]
