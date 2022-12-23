@@ -160,7 +160,7 @@ $shadow: hsla(210, 40%, 52%, .4);
                 width: 100% + $extra-width;
                 height: 120%;
 
-                left: -66% - $extra-width / 2;
+                left: calc(-66% - $extra-width / 2);
 
                 background-color: $bg;
                 transition: transform .4s ease-out;

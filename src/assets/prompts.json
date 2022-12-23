@@ -33,5 +33,15 @@
         "for": "Le G",
         "left": { "name": "Mark Leknor", "image": "uk.jpg"},
         "right": { "name": "Remi", "image": "french.jpg"}
+    },
+    {
+        "for": "La famille",
+        "left": { "name": "La table des bros", "image": "bros.HEIC"},
+        "right": { "name": "Le véritable", "image": "veritable.jpg"}
+    },
+    {
+        "for": "La famille",
+        "left": { "name": "La table des bros", "image": "bros.HEIC"},
+        "right": { "name": "Le véritable", "image": "veritable.jpg"}
     }
 ]
